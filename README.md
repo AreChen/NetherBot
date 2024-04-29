@@ -1,6 +1,6 @@
-![image](https://github.com/AreChen/NetherBot/assets/20765464/9dcc29a4-4dc7-4375-9676-0b23544cd110)# Netherbot - Tool for  [trickerer/Trinity-Bots](https://github.com/trickerer/Trinity-Bots)
-Netherbot is an addon for NPCBots for TrinityCore and AzerothCore 3.3.5, allowing for quick and easy access to various bot-related commands.
-此仓库是针对于Netherbot原始插件的中文化补全及功能修复
+# Netherbot - Tool for  [trickerer/Trinity-Bots](https://github.com/trickerer/Trinity-Bots)
+## Netherbot is an addon for NPCBots for TrinityCore and AzerothCore 3.3.5, allowing for quick and easy access to various bot-related commands.
+## 此仓库是针对于Netherbot原始插件的中文化补全及功能修复
 ![image](https://github.com/AreChen/NetherBot/assets/20765464/28d5ec99-8e2e-40fa-8542-2a578f476a2c)
 
 
