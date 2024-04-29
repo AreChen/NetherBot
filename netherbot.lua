@@ -139,7 +139,7 @@ followButton:SetPoint("TOPLEFT", frame, "TOPLEFT", 8, -35)
 followButton:SetSize(42, 42)
 local followButtonText = followButton:CreateFontString(nil, "OVERLAY")
 followButtonText:SetFont("Fonts\\FRIZQT__.TTF", 10, "OUTLINE") -- Use the "OUTLINE" flag for text outline
-followButtonText:SetText("Follow")
+followButtonText:SetText("跟随")
 followButtonText:SetPoint("CENTER", 0, 0)
 followButtonText:SetTextColor(1, 1, 0) -- Set text color (yellow in this case)
 
@@ -159,7 +159,7 @@ standstillButton:SetPoint("LEFT", followButton, "RIGHT", 5, 0)
 standstillButton:SetSize(42, 42)
 local standstillButtonText = standstillButton:CreateFontString(nil, "OVERLAY")
 standstillButtonText:SetFont("Fonts\\FRIZQT__.TTF", 11, "OUTLINE") -- Use the "OUTLINE" flag for text outline
-standstillButtonText:SetText("Stand")
+standstillButtonText:SetText("站着")
 standstillButtonText:SetPoint("CENTER", 0, 0)
 standstillButtonText:SetTextColor(1, 1, 0) -- Set text color (yellow in this case)
 
@@ -179,7 +179,7 @@ fullstopButton:SetPoint("LEFT", standstillButton, "RIGHT", 5, 0)
 fullstopButton:SetSize(42, 42)
 local fullstopButtonText = fullstopButton:CreateFontString(nil, "OVERLAY")
 fullstopButtonText:SetFont("Fonts\\FRIZQT__.TTF", 11, "OUTLINE") -- Use the "OUTLINE" flag for text outline
-fullstopButtonText:SetText("Stop")
+fullstopButtonText:SetText("停下")
 fullstopButtonText:SetPoint("CENTER", 0, 0)
 fullstopButtonText:SetTextColor(1, 1, 0) -- Set text color (yellow in this case)
 
@@ -199,7 +199,7 @@ followOnlyButton:SetPoint("LEFT", fullstopButton, "RIGHT", 5, 0)
 followOnlyButton:SetSize(42, 42)
 local followOnlyButtonText = followOnlyButton:CreateFontString(nil, "OVERLAY")
 followOnlyButtonText:SetFont("Fonts\\FRIZQT__.TTF", 11, "OUTLINE") -- Use the "OUTLINE" flag for text outline
-followOnlyButtonText:SetText("Slack")
+followOnlyButtonText:SetText("被动")
 followOnlyButtonText:SetPoint("CENTER", 0, 0)
 followOnlyButtonText:SetTextColor(1, 1, 0) -- Set text color (yellow in this case)
 
@@ -219,7 +219,7 @@ ShowNPCButton:SetPoint("TOPLEFT", followButton, "BOTTOMLEFT", 0, -5)
 ShowNPCButton:SetSize(42, 42)
 local ShowButtonText = ShowNPCButton:CreateFontString(nil, "OVERLAY")
 ShowButtonText:SetFont("Fonts\\FRIZQT__.TTF", 10, "OUTLINE") -- Use the "OUTLINE" flag for text outline
-ShowButtonText:SetText("UnHide")
+ShowButtonText:SetText("解除隐藏")
 ShowButtonText:SetPoint("CENTER", 0, 0)
 ShowButtonText:SetTextColor(1, 1, 0) -- Set text color (yellow in this case)
 
@@ -239,7 +239,7 @@ HideNPCButton:SetPoint("LEFT", ShowNPCButton, "RIGHT", 5, 0)
 HideNPCButton:SetSize(42, 42)
 local HideButtonText = HideNPCButton:CreateFontString(nil, "OVERLAY")
 HideButtonText:SetFont("Fonts\\FRIZQT__.TTF", 11, "OUTLINE") -- Use the "OUTLINE" flag for text outline
-HideButtonText:SetText("Hide")
+HideButtonText:SetText("隐藏")
 HideButtonText:SetPoint("CENTER", 0, 0)
 HideButtonText:SetTextColor(1, 1, 0) -- Set text color (yellow in this case)
 
@@ -261,7 +261,7 @@ RecallNPCButton:SetPoint("LEFT", HideNPCButton, "RIGHT", 5, 0)
 RecallNPCButton:SetSize(42, 42)
 local RecallButtonText = RecallNPCButton:CreateFontString(nil, "OVERLAY")
 RecallButtonText:SetFont("Fonts\\FRIZQT__.TTF", 11, "OUTLINE") -- Use the "OUTLINE" flag for text outline
-RecallButtonText:SetText("Recall")
+RecallButtonText:SetText("召回")
 RecallButtonText:SetPoint("CENTER", 0, 0)
 RecallButtonText:SetTextColor(1, 1, 0) -- Set text color (yellow in this case)
 
@@ -281,7 +281,7 @@ unbindButton:SetPoint("LEFT", RecallNPCButton, "RIGHT", 5, 0)  -- Positioning it
 unbindButton:SetSize(42, 42)
 local unbindButtonText = unbindButton:CreateFontString(nil, "OVERLAY")
 unbindButtonText:SetFont("Fonts\\FRIZQT__.TTF", 11, "OUTLINE")
-unbindButtonText:SetText("Unbind")
+unbindButtonText:SetText("删除")
 unbindButtonText:SetPoint("CENTER", 0, 0)
 unbindButtonText:SetTextColor(1, 1, 0)
 
@@ -373,14 +373,14 @@ adminButton:GetNormalTexture():SetVertexColor(0.10,1.00,0.10)
 local raidButton = CreateFrame("Button", "NetherbotRaidButton", frame, "UIPanelButtonTemplate")
 raidButton:SetSize(70, 20)
 raidButton:SetPoint("BOTTOMRIGHT", frame, "BOTTOMRIGHT", -120, 10) -- position the button in the bottom right of the frame
-raidButton:SetText("RaidFrame")
+raidButton:SetText("团队框架")
 raidButton:GetNormalTexture():SetVertexColor(0.10,1.00,0.10)
 
 -- Add Revive Button
 local reviveButton = CreateFrame("Button", "NetherbotReviveButton", frame, "UIPanelButtonTemplate")
 reviveButton:SetSize(50, 20)
 reviveButton:SetPoint("BOTTOMRIGHT", frame, "BOTTOMRIGHT", -70, 10) -- Position between RaidFrame and Admin
-reviveButton:SetText("Revive")
+reviveButton:SetText("复活")
 reviveButton:GetNormalTexture():SetVertexColor(0.10,1.00,0.10)
 
 -- Revive Button Function
@@ -505,11 +505,11 @@ standstillButton:SetScript("OnClick", function()
 buttonAdd:SetScript("OnClick", function()
     local target = UnitName("target")
     if target then
-      -- Target is selected, run command ".npcbot add target"
-      ChatFrame1:AddMessage(".npcbot add " .. target)
-      SendChatMessage(".npcbot add ", "SAY")
+      -- Target is selected, run command ".npcbot spawn target"
+      ChatFrame1:AddMessage(".npcbot spawn " .. target)
+      SendChatMessage(".npcbot spawn ", "SAY")
     else
-      -- Target is not selected, prompt input and run command ".npcbot add (input value)"
+      -- Target is not selected, prompt input and run command ".npcbot spawn (input value)"
       StaticPopupDialogs["ADD_NPC"] = {
         text = "Enter NPCBOT ID:",
         button1 = "Ok",
@@ -520,8 +520,8 @@ buttonAdd:SetScript("OnClick", function()
         hideOnEscape = true,
         OnAccept = function(self)
           local npc = self.editBox:GetText()
-          ChatFrame1:AddMessage(".npcbot add " .. npc)
-          SendChatMessage(".npcbot add " .. npc, "SAY")
+          ChatFrame1:AddMessage(".npcbot spawn " .. npc)
+          SendChatMessage(".npcbot spawn " .. npc, "SAY")
         end,
       }
       StaticPopup_Show("ADD_NPC")
@@ -668,20 +668,28 @@ local classTable = {
   ["Spellbreaker"] = 16,
   ["DarkRanger"] = 17,
   ["Necromancer"] = 18,
-  ["SeaWitch"] = 19
+  ["SeaWitch"] = 19,
+  ["Cryptlord"] = 20,
 }
 
+-- Sort the table by class number
+local sortedClasses = {}
+for k, v in pairs(classTable) do
+  table.insert(sortedClasses, {key = k, value = v})
+end
+table.sort(sortedClasses, function(a, b) return a.value < b.value end)
+
 -- Create the buttons for the list items
-for key, value in pairs(classTable) do
-  local button = CreateFrame("Button", "NetherbotLookupButton"..value, lookupList, "UIPanelButtonTemplate")
+for index, class in ipairs(sortedClasses) do
+  local button = CreateFrame("Button", "NetherbotLookupButton"..class.value, lookupList, "UIPanelButtonTemplate")
   button:SetSize(180, 25)
-  button:SetPoint("TOPLEFT", lookupList, "TOPLEFT", 10, -10 - (value-1)*30)
-  button:SetText(i18n(key))
+  button:SetPoint("TOPLEFT", lookupList, "TOPLEFT", 10, -10 - (index-1)*30)
+  button:SetText(i18n(class.key))
   button:GetNormalTexture():SetVertexColor(0.10,1.00,0.10)
 
   -- Handle the button's click event
   button:SetScript("OnClick", function()
-    SendChatMessage(".npcbot lookup " .. value, "SAY")
+    SendChatMessage(".npcbot lookup " .. class.value, "SAY")
     -- You can add your custom functionality here like running a command or doing some other action
   end)
 end
